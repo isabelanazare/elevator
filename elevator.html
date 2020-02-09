@@ -1,0 +1,99 @@
+<html>
+<head>
+    <script src="elevator.js"></script>
+    <link rel="stylesheet" type="text/css" href="elevator.css">    
+</head>
+
+<body onload="hideFloorAndElevator()">
+    <div class="row">
+        <div class="column">
+            <table style="width:10%">
+                <tr>
+                    <th>Building</th>
+                </tr>
+                <tr>
+                    <td><button onclick="showFloor(6)">6th floor</button></td>
+                <tr>
+                    <td><button onclick="showFloor(5)">5th floor</button></td>
+                </tr>
+
+                <tr>
+                    <td><button onclick="showFloor(4)">4th floor</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="showFloor(3)">3rd floor</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="showFloor(2)">2nd floor</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="showFloor(1)">1st floor</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="showFloor(0)">floor zero</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="column">
+            <div id="elevator">
+                <div class="elevatorTitle"></div>
+                <div class="elevatorState"></div>
+                <div class="elevatorPosition"></div>
+                <div class="message"></div>
+                <div class="elevatorPositionPanel" style="margin-top:10%;">
+                <table width="60px" class="panel" style="margin-right:8px">
+                    <tr height="10px">
+                        <td class="n" width="10px"></td>
+                        <td id="segment0" class="x" width="48px"> </td>
+                        <td class="n" width="10px"> </td>
+                    </tr>
+            
+                    <tr height="35px">
+                        <td id="segment5" class="x" width="10px"> </td>
+                        <td class="n" width="52px"> </td>
+                        <td id="segment1" class="x" width="10px"> </td>
+                    </tr>
+            
+                    <tr height="10px">
+                        <td class="n" width="10px"> </td>
+                        <td id="segment6" class="x" width="52px"> </td>
+                        <td class="n" width="px"> </td>
+                    </tr>
+            
+                    <tr height="35px">
+                        <td id="segment4" class="x" width="10px"> </td>
+                        <td class="n" width="52px"> </td>
+                        <td id="segment2" class="x" width="10px"> </td>
+                    </tr>
+            
+                    <tr height="10px">
+                        <td class="n" width="10px"> </td>
+                        <td id="segment3" class="x" width="53px"> </td>
+                        <td class="n" width="10px"> </td>
+                    </tr>
+                </table>
+            </div>
+                <div class="buttons">
+                    <p>
+                        <button onClick="goToFloor(this.value)" value="0"> 0 </button>
+                        <button onClick="goToFloor(this.value)" value="1"> 1 </button>
+                        <button onClick="goToFloor(this.value)" value="2"> 2 </button></p>
+                    <p><button onClick="goToFloor(this.value)" value="3">  3 </button>
+                        <button onClick="goToFloor(this.value)" value="4"> 4 </button>
+                        <button onClick="goToFloor(this.value)" value="5"> 5 </button>
+                    </p>
+                    <p><button onClick="goToFloor(this.value)" value="6">  6 </button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="floor">
+        <div class="floorNumberId" style="font-size:30px"></div>
+        <div id="stateA" style="margin-top:2%"></div>
+        <div id="stateB"></div>
+        <td><button onclick="getElevator()" style="margin-top:2%">UP</button>
+            <button onclick="getElevator()">DOWN</button></td>
+    </div>
+</body>
+</html>

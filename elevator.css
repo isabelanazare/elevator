@@ -1,0 +1,58 @@
+body {
+    font-family: "Candara", "Arial";
+}
+
+button {
+    font-size:14px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.Row {
+    display: table;
+    width: 30%;
+    table-layout: fixed;
+    border-spacing: 10px;
+}
+
+.Column {
+    display: table-cell;
+}
+
+#floor #stateA, #stateB {
+    font-size:20px;
+}
+
+#elevator .elevatorTitle {
+    font-size:20px;
+}
+
+#elevator .buttons button {
+    font-size:15px;
+}
+
+.elevatorPositionPanel table {
+    border-radius:10px;
+    padding:5px;
+}
+  
+.elevatorPositionPanel .panel {
+    background-color:black;
+}
+  
+.elevatorPositionPanel .y {
+    background-color:rgb(40, 209, 25);
+}
+
+.elevatorPositionPanel .x {
+    background:#073b0b;
+}
+
+.elevatorPositionPanel .n {
+    background-color:black;
+}
